@@ -1,0 +1,744 @@
+<html>
+<head>
+ 
+<meta name='GENERATOR' 			content='Notepad ver 5.1'>
+<meta name='CCG as CREATOR/CODER/GRAPHIX' 	content='Lacasrac'>
+<meta name='NEWS' 				content='2003/majus/23'>
+<meta name='VERSION' 				content='3.0'>
+<meta name='VB_SCRIPT_VERSION' 		content='VBScript Version 5.6.6626 '>
+ 
+<title>:: Laca lapja 3.0 :: I :: VISUAL BASIC:: OPENGL::  - Microsoft Internet Explorer</title>
+
+<link rel="STYLESHEET" type="text/css" href="main.css">
+</head>
+
+<body bgcolor="#FFC846" topmargin="0" leftmargin="0" onload="varj()" >
+
+<!--HTML RÉSZLEG------------------------------------------------------------> 
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+     
+<td  width="27%" valign="top" align="left"><img src="buck.gif" class=hands onmouseover="popup('Laca oldala...','')" onmouseout=kill()><img src="pont_y.gif"
+     width="21" height="21" STYLE="TOP: 0px;position=absolute"></td>
+ 
+<td width="38%" align="left" valign="top">
+ 
+<select name="service" size="1" class="list2" STYLE="TOP:0px;LEFT=1%;position:absolute title="Hol keressem?">
+ <OPTION value=0>.altavista</OPTION> 
+ <OPTION value=1>.goliat</OPTION> 
+ <OPTION value=2>.google</OPTION> 
+ <OPTION value=3>.altavizsla</OPTION> 
+ <OPTION value=4>.yahoo</OPTION> 
+</select>
+ 
+&nbsp;
+<input type="text" size="14" name="kereso" class="textarea" STYLE="TOP:1px;LEFT=39%;position:absolute" onmouseover="popup('Mit keressek?','')" 
+onmouseout=kill()>
+</font>
+ 
+<input type="button" name="cls" class="black_btn2" value="Cls" OnClick="Clear_box()" STYLE="TOP:1px;LEFT=50%;position:absolute" onmouseover="popup('Töröl','')" 
+onmouseout=kill()>
+<input type="button" name="kere" class="black_btn2" value="Keresés" OnClick="OpenSearch()" STYLE="TOP:1px;LEFT=54%;position:absolute" onmouseover="popup('Keress!','')" 
+onmouseout=kill()>
+</td>
+ 
+<td align="right" width="33% valign="center" bgcolor="#000000">
+ 
+<input type="text" size="22" class=time name="date_it" readonly STYLE="LEFT: 67%;TOP:1px;position=absolute">
+ 
+<input type="text" size="12" class=time name="time_it" readonly STYLE="LEFT: 88%;TOP:0px;position=absolute">
+ 
+<input type="text" size="40" class=time2 name="nap_it" readonly STYLE="LEFT: 67%;TOP:16px;position=absolute">
+
+</td>
+</tr>
+</table>
+<div align="left">
+ 
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td align="center" valign="top" width="10"><div
+        align="left"><table border="0" cellpadding="0"
+        cellspacing="0" width="100%">
+            <tr>
+	<td align="center" width="100%" bgcolor="#000000">
+	<marquee behavior="alternate" scrollamount="4"
+                scrolldelay="100" width="100%" ><font color="#FFB936" size="1" 		face="Arial">::Laca oldala::</marquee></font></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td width="100%"><a href="http://alvilag.hu/lacasrac/index_000.htm" onmouseover=mousemove("main2.gif","i1") onmouseout=mouseout("main.gif","i1")> 
+                <img src="main.gif" border="0" width="158" height="18"                             name="i1"></a></td>
+            </tr>
+            <tr>
+                <td width="100%"><a 
+                 onmouseover=mousemove("magam2.gif","mag")                                          onmouseout=mouseout("magam.gif","mag")>
+               <img src="magam.gif" alt="Hm-hmmm, iszonyat kíváncsi vagy!" border="0" width="158" height="18" name="mag"                 class=hands onclick=Open_New_Window("magamrol.htm","magamrol",0,1,0,500,500,150,0)></a></td>
+            </tr>
+            <tr>
+                <td width="100%"><a 
+                 onmouseover=mousemove("progs2.gif","progs")                                        onmouseout=mouseout("progs.gif","progs")> 
+                <img src="progs.gif"  border="0" width="158" height="18" alt="Nézz körül az újdonságok Részlegben..." name="progs" class=hands onclick=Open_New_Window("pro.htm","prog_s",0,1,0,600,500,100,0)></a></td>
+            </tr>
+            <tr>
+                <td width="100%"><a
+                 onmouseover=mousemove("egyeb2.gif","egyeb")                                        onmouseout=mouseout("egyeb.gif","egyeb")>
+                <img src="egyeb.gif" alt="Egyebek..." border="0" width="158" height="18"                  name="egyeb" class=hands onclick=Open_New_Window("egyeb.htm","egyebe_k",0,1,0,600,500,100,0)></a></td>
+            </tr>
+            <tr>
+                <td>
+	&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center" valign="top" bgcolor="#000000"><font color="#FFB936" size="2" face="Verdana">
+ 
+</font></td>
+            </tr>
+            <tr >
+                <td align="center"  width="100%"> 
+
+<font color="#000000" size="1" face="verdana">
+
+
+</font></td>
+            </tr>
+            <tr>
+                <td align="center" valign="center" width="100%">&nbsp;</td>
+            </tr> 
+
+                    <tr>
+                        <td width="100%"><img
+                        src="scriptek.gif" name="scrgif" onmouseover="popup('Scriptek ki/be','')" onmouseout=kill() class=hands onclick="animscr()"></td>
+                    </tr>
+ 
+<tr>
+<td align="center" bgcolor="#000000" >
+
+<!-- -->
+
+<STYLE type=text/css media=screen>#dek {Z-INDEX: 200; VISIBILITY: hidden; POSITION: absolute}</STYLE>
+
+<DIV id=dek></DIV>
+
+<p><input type="button" name="game" class=black_btn value="Kitalálós játék" OnClick=Open_New_Window("jatek3.htm","gamee",0,1,0,330,230,260,0) onmouseover="popup('Kitalálós játékom!','')" onmouseout=kill()></p>
+</td>            
+</tr>
+ 
+<tr>                
+<td align="center" bgcolor="#000000" >
+<input
+type="button" name="vissza" class=black_btn value="Visszaíró progi" OnClick=Open_New_Window("visszairo3.htm","vissza",0,1,0,240,500,0,0) onmouseover="popup('Szövegmegfordító alkalmazás','')" 
+onmouseout=kill()>
+</td>
+</tr>
+
+<tr>                
+<td align="center" bgcolor="#000000" >
+<input
+type="button" name="kodolj" class=black_btn value="Kódoló/Dekódoló" OnClick=Open_New_Window("kodolo.htm","kodolj",0,1,0,240,500,0,0) onmouseover="popup('Kódoló/Dekódoló kisalkalmazás','')" 
+onmouseout=kill()>
+</td>
+</tr>
+ 
+<tr>
+<td align="center" bgcolor="#000000">&nbsp;</td>
+</tr>
+ 
+<tr><td align="center" bgcolor="#000000" >
+<input
+type="button" name="bjack" class=orange_btn value="21-es játék" OnClick=Open_New_Window("loading.htm","vissza",0,1,0,700,470,50,10) onmouseover="popup('BlackJack 2.0 Internetes változata...','')" 
+onmouseout=kill()>
+</td>
+</tr>
+
+<tr>
+<td align="center" bgcolor="#000000">
+
+<input
+type="button" name="poen" class=orange_btn value="Poén SCRIPT" OnClick=Open_New_Window("machine.htm","vissza",0,1,0,700,470,50,10) onmouseover="popup('Poén Script ;-))','')" 
+onmouseout=kill()>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" >
+<img src="scriptalj.gif" id="scralj">
+</td>
+</tr>
+           <tr>
+                <td align="center"><div align="left"><table
+                border="0" cellpadding="0" cellspacing="0"
+                width="100%" bordercolor="#000000"
+                bordercolordark="#000000"
+                bordercolorlight="#000000">
+                    <tr>
+                        <td width="100%"><img
+                        src="ked_im.gif" onmouseover="popup('Kedvenc oldalaim...','')" onmouseout=kill()></td>
+                    </tr>
+                    <tr>
+                        <td width="100%" bgcolor=rgb(0,0,0)>  
+<font color="#FFB936"  size="2" face="Wingdings">l</font> 
+<font  size="2" face="Verdana">
+<a title="Mportal játékszerver oldal"
+  href="http://www.mportal.hu" name="mportal" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear()>
+<font  size="2" face="arial">www.mportal.hu</font></a>
+<br>
+                        </font><font size="2" color="#FFB936"
+                        face="Wingdings">l</font><font
+                        size="2" face="Verdana"> </font>
+
+<a title="Egész jó kis chat oldal"
+                        href="http://www.chatelo.hu" name="chatelo" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear()><font
+                        size="2" face="Arial">www.chatelo.hu</font></a><br>
+                        <font size="2" color="#FFB936"
+                        face="Wingdings">l</font><font
+                        color="#FFB936" size="2" face="Verdana"> </font><a  title="Axelero net"
+                        href="http://www.axelero.hu" name="axelero" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear()><font
+                        size="2" face="Arial">www.axelero.hu</font></a> 
+<br>
+                        <font size="2" color="#FFB936"
+                        face="Wingdings">l</font><font
+                        color="#FFB936" size="2" face="Verdana"> </font><a  title="Teveklub!"
+                        href="http://www.teveclub.hu" name="teve" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear()><font
+                        size="2" face="Arial">www.teveclub.hu</font></a> 
+<br>
+                        <font size="2" color="#FFB936"
+                        face="Wingdings">l</font><font
+                        color="#ffffff" size="2" face="Verdana"> </font><a  title="Az egyik legjobb chat oldal..."
+                        href="http://www.chat.hu" name="c6" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear()><font
+                        size="2" face="Arial">www.chat.hu</font></a> 
+<br>
+                        <font size="2" color="#FFB936"
+                        face="Wingdings">l</font><font
+                        color="#ffffff" size="2" face="Verdana"> </font><a  title="Programozási oldal/Fórumok"
+                        href="http://www.prog.hu" name="proghu" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear()><font
+                        size="2" face="Arial">www.prog.hu</font></a> 
+<br>
+                        <font size="2" color="#FFB936"
+                        face="Wingdings">l</font><font
+                        color="#ffffff" size="2" face="Verdana"> </font><a  title="Free Kódok"
+                        href="http://www.freecode.hu" name="freecode" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear()><font
+                        size="2" face="Arial">www.freecode.hu</font></a> 
+<br>
+                        <font size="2" color="#FFB936"
+                        face="Wingdings">l</font><font
+                        color="#ffffff" size="2" face="Verdana"> </font><a  title="LBA ökörségek"
+                        href="http://www.lba.hu" name="lba" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear()><font
+                        size="2" face="Arial">www.lba.hu</font></a> 
+<br>
+                        <font size="2" color="#FFB936"
+                        face="Wingdings">l</font><font
+                        color="#ffffff" size="2" face="Verdana"> </font><a  title="Winamp fejlesztés"
+                        href="http://www.winamp.com" name="wamp" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear()><font
+                        size="2" face="Arial">www.winamp.com</font></a> 
+<br>
+                        <font size="2" color="#FFB936"
+                        face="Wingdings">l</font><font
+                        color="#ffffff" size="2" face="Verdana"> </font><a  title="AMD fejlesztések"
+                        href="http://www.amd.com" name="amd" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear()><font
+                        size="2" face="Arial">www.amd.com</font></a> 
+<br>
+                        <font size="2" color="#FFB936"
+                        face="Wingdings">l</font><font
+                        color="#ffffff" size="2" face="Verdana"> </font><a  title="INTEL fejlesztések"
+                        href="http://www.intel.com" name="intel" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear()><font
+                        size="2" face="Arial">www.intel.com</font></a> 
+<br>
+                        <font size="2" color="#FFB936"
+                        face="Wingdings">l</font><font
+                        color="#ffffff" size="2" face="Verdana"> </font><a  title="NEHE 3D fejlesztések"
+                        href="http://www.nehe.gamedev.net" name="nehe" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear()><font
+                        size="2" face="Arial">nehe.gamedev.net</font></a>
+<br>
+                        <font size="2" color="#FFB936"
+                        face="Wingdings">l</font><font
+                        color="#ffffff" size="2" face="Verdana"> </font><a  title="AI fejlesztések, Turing TESZT, gyõzõdj meg róla, hogy valóban egy számítógéppel beszélsz! / Angol"
+                        href="http://aimovie.warnerbros.com/html/flash.html" name="alice" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear()><font
+                        size="2" face="Arial">A.L.I.C.E. Chatrobot</font></a>
+<br>
+                        <font size="2" color="#FFB936"
+                        face="Wingdings">l</font><font
+                        color="#ffffff" size="2" face="Verdana"> </font><a  title="Ismét egy programozó portál, kódhegyekkel, Visual Basic, VC++, stb kódokkal, Heti, Hónapi legjobbak versenye...stb."
+                        href="http://www.planet-source-code.com" name="planet" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear()><font
+                        size="2" face="Arial">Planet source</font></a>
+</td>
+                    </tr>
+                </table> 
+ 
+<img src="scriptalj.gif" id="scralj"> 
+                </div></td>
+            </tr>
+            <tr>
+                <td align="center" width="100%">&nbsp;</td>
+            </tr>
+        </table>
+        </div></td>
+        <td rowspan="2" width="1" bgcolor=black>&nbsp;</td>
+        <td align="center" valign="top" rowspan="2" width="85%"
+        bgcolor="#FFFDD7"><br>
+
+<table border="0" cellpadding="0" cellspacing="0" width="90%"
+        bgcolor="#FFFDD2" bordercolor="#ffffff"
+        bordercolordark="#ffffff" bordercolorlight="#ffffff">
+            </tr>
+            <tr>
+                <td colspan="3" width="1%">
+<font face=verdana size=1><b>&nbsp;Üdv Vándor!!</b></font>
+</td>
+</tr>
+
+<tr >
+<td width="100%" bgcolor="#FFF1C7">
+<img src="fenn1.gif" align="top" width="100%">
+<font color="#000000" size="1" face="Verdana">&nbsp;&nbsp;Isten hozott megújult oldalamon!
+                Gondoltam itt az ideje a designváltásnak is,
+                &nbsp;ezért tessék-lássék, remélem tetszik és
+                jobb, mint a régi. Igyekszem frissíteni &nbsp;az
+                oldalt és az összes menüt is, mert egyelõre
+                még nem valami sok muxik. &nbsp;Ennyit a
+                bevezetõrõl...Felpakoltam néhány saját
+                programot is..<br>
+                </font><font size="1" face="Verdana"><br>
+                <strong>&nbsp;::Fõ oldal::</strong> Ez az oldal,
+                frissítések idõpontja, stb, stb, stb.
+                <br>
+                <strong>&nbsp;::TTC Atomchat::</strong> Chat-es lapok, szünetel...
+                <br>
+                <strong>&nbsp;::Magamról::</strong> Itt egy kis
+                információ található 'magamról'.
+                <br>
+                <strong>&nbsp;::Programozás::</strong> E menüpont
+                alatt forráskódok találhatóak, meg <br>
+                &nbsp;minden nyalánkság. //Fõleg VB6, Vbscript
+                <br>
+                <strong>&nbsp;::Egyebek::</strong> Itt találhatóak az
+                olyan dolgok, amelyek nem fértek be egyik                &nbsp;kategóriába sem...Jelenleg: Örkény egypercesek, stb...                <br>
+                <strong>&nbsp;::Vendégkönyv::</strong> Ezt gondolom
+                mindenki tudja, ismét szünetel!
+                <br>
+                <strong>&nbsp;::E-mail::</strong><a title="Küldj egy mailt nekem!"
+                href="mailto:lacasrac@wap.hu" class=hun name="mailke" onmouseover=ColorFade(name,"#000000","#FE771B")  onmouseout=Clear()><font size="1"
+                face="Verdana">lacasrac@wap.hu</font></a> persze Vírusokat azért ne küldjetek már, &nbsp;televagyok.:)
+
+<br>
+&nbsp;<font face=verdana size=1>Saját programokról/játékokról készült képek itt:<b>&nbsp;»<a href="htms\pictures.htm" target="_blank" class=hun name="my_progs_games" onmouseover=ColorFade(name,"#000000","#FE771B")  onmouseout=Clear()>KÉPEK</b></a>&nbsp;</font>
+<br>
+&nbsp;<font face=verdana size=1>Fórum is található, nevezetesen itt: <b>&nbsp;»<a href="http://forum.supergamez.hu/forum.php3?azonosito=lacasrac" target="_blank" class=hun name="my_forum" onmouseover=ColorFade(name,"#000000","#FE771B")  onmouseout=Clear()>FÓRUM</b></a>&nbsp;</font><br>
+
+<!-Billiard Project 3GL-->
+<br>
+&nbsp;<font face=verdana size=1><b>Megnézem a Billiard 3GL(3d openGL) honlapját! <b>&nbsp;»<a href="index_000.htm" class=hun name="ajatek3d" onmouseover=ColorFade(name,"#000000","#FE771B") onmouseout=Clear() onclick=Open_New_Window("bill2.htm","Billoka",0,1,0,770,530,5,5)>Billiard 3GL</b></a>&nbsp;</font><br>
+
+
+<img src="lenn1.gif" valign="bottom" width="100%">
+                </td>
+            </tr>
+        </table>
+<br>
+ 
+ <table border="0" cellpadding="0" cellspacing="0" width="90%"
+        bgcolor="#FFB936" bordercolor="#FFB936"
+        bordercolordark="#FFB936" bordercolorlight="#FFB936" >
+
+        <tr>
+        <td bgcolor="#FFFDD2"><font color="#000000"
+        size="1" face="verdana"><strong>&nbsp;Saját Visual Basic 6.0 forráskódok /FREE I 2003. Április 24. 17:37.09</strong></font></td>
+        </tr>
+
+        <tr>
+        <td bgcolor="#FFF1C7">
+<img src="fenn1.gif" align="top" width="100%">
+
+         <font color="#000000" size="1" face="courier">
+
+<!-- SCROLLCODE HERE, made by Laca 2003                                                                        -->
+            <TABLE borderColor=#000000 cellSpacing=1 borderColorDark=#ffffff 
+            cellPadding=1 width="100%" borderColorLight=#ffffff border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV align=center>
+
+<!--onmouseover=this.stop() onmouseout=this.start()  kiszedve-->
+                  <MARQUEE name="myProgs"
+                  scrollAmount=1 scrollDelay=70 direction=up width=100% 
+                  bgColor="#FFF1C7" height=220 bordercolor="#FFF1C7" border="2">
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=44958&lngWId=1"
+name="my1" target=name>
+<FONT face=verdana class=hun size=1><B>Mouse joke</B></A>
+<br><br>Egy kis poén a windows-os egérkezelõ API-hoz..</FONT>
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=44957&lngWId=1"
+name="my2" target=name>
+<FONT face=verdana size=1><B>My algorithm</B></A>
+<br><br>Ez egy saját algoritmus, drag 'N' drop másképpen...</FONT>
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=44633&lngWId=1"
+name="my3" target=name>
+<FONT face=verdana size=1><B>Code typer</B></A>
+<br><br>Nem nagy cucc, egyszerûen kiírja a forráskódot a képernyõre gépelve. Ötlet az Antitrust címû filmbõl...</FONT>
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=44532&lngWId=1"
+name="my4" target=name>
+<FONT face=verdana size=1><B>String2hexa</B></A>
+<br><br>String to Hexa konverter saját OCX-el</FONT>
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=44531&lngWId=1"
+name="my5" target=name>
+<FONT face=verdana size=1><B>Funny Matrix</B></A>
+<br><br>Megér egy próbát, de hogy micsoda már nem nagyon tudom:)))</FONT>
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=44530&lngWId=1"
+name="my6" target=name>
+<FONT face=verdana size=1><B>Waver</B></A>
+<br><br>Szintén hullámzás, de ez már egy képet hullámoztat, ugyanaz az elv, pixelenként, elég memóriaigényes.</FONT>
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=44529&lngWId=1"
+name="my7" target=name>
+<FONT face=verdana size=1><B>Winamp list</B></A>
+<br><br>Egy az egyben Winamp 3 lista még itt-ott kisebb hibákkal...befejezetlen.</FONT>
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=44493&lngWId=1"
+name="my8" target=name>
+<FONT face=verdana size=1><B>Coder</B></A>
+<br><br>Kódoló program, nagyon egyszerû, ezt még 'anno' készítettem.</FONT>
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=44486&lngWId=1"
+name="my9" target=name>
+<FONT face=verdana size=1><B>Hanoi tornya</B></A>
+<br><br>Az ismert Hanoi-tornyának probléma megoldása, akárhány elem esetén..</FONT>
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=44439&lngWId=1"
+name="my10" target=name>
+<FONT face=verdana size=1><B>NewList</B></A>
+<br><br>A Winamp 3 lista magyar verziója...</FONT>
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=44438&lngWId=1"
+name="my11" target=name>
+<FONT face=verdana size=1><B>Main Menu</B></A>
+<br><br>Egy egyszerû rajzos main menu forgatásokkal.</FONT>
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=44350&lngWId=1"
+name="my12" target=name>
+<FONT face=verdana size=1><B>Matrix sorter</B></A>
+<br><br>Matrix rendezõ, avagy egy rendezési eljárás átírata mátrixra.</FONT>
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=44350&lngWId=1"
+name="my13" target=name>
+<FONT face=verdana size=1><B>Matrix carpet</B></A>
+<br><br>Matrix carpet, azaz Mátrix szõnyeg, hullámzása, lásd Windows XP 3d Screensaver...</FONT>
+
+<P>
+<HR><NOSHADE>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?lngWId=1&txtCodeId=45074"
+name="my14" target=name>
+<FONT face=verdana size=1><B>AlphaBlend</B></A>
+<br><br>AlphaBlend saját algoritmus, azaz 2 kép összemosása, 'átlátszóság'.</FONT>
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=45075&lngWId=1"
+name="my15" target=name>
+<FONT face=verdana size=1><B>Grey scale</B></A>
+<br><br>Greyscale metódus, azaz egy képet átkonvertál szürkébe..</FONT>
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=45102&lngWId=1"
+name="my16" target=name>
+<FONT face=verdana size=1><B>BlackJack3d</B></A>
+<br><br>Eredetileg a szakdolgozatom lett volna, de túl sok volt benne a rizikó, nagy gépigény, valamint túl egyszerû...Ha minden igaz a Magyar verzió fenn van a www.honositomuhely.hu-n nemsokára.</FONT>
+
+<P>
+<A href="http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=45076&lngWId=1"
+name="my17" target=name>
+<FONT face=verdana size=1><B>Mouse 3</B></A>
+<br><br>Ez egy aranyos kis program, elég jó ötletnek tûnik, nemrégen kezdtem el, még bármi lehet belõle. Mit csinál? A program egy matrixban tárolja az x,y értékeket, majd ezután kirajzolja 2D-ben a képernyõre õket, aranyos kis rajzprogi, de még csak most kezdtem el..</FONT>
+
+<P>
+<A href="bj2.zip"
+name="my18" target=name>
+<FONT face=verdana size=1><B>BlackJack 2</B></A>
+<br><br>BlackJack 2 játék, ebbõl készült a 3D-s is.</FONT>
+
+<!--bj3d_exe_hun.zip-->
+<P>
+<A href="bj3d_exe_hun.zip"
+name="my19" target=name>
+<FONT face=verdana size=1><B>BlackJack 3D EXE HUN</B></A>
+<br><br>BlackJack 3D játék OPENGL-ben, EXE file->> Magyar verzió.
+
+<br><strong>Mostani projekteim VB 6.0-ban...</strong>
+<br>
+&nbsp;-Chat rendszer kialakítása
+<br>
+&nbsp;-Billiárd OPENGL 3d szimulálása, valamint chat rendszer beiktatása, &nbsp;internetes játékmódok.
+(Szakdolgozat téma)
+</FONT>
+
+<P></P></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></MARQUEE></DIV></TD></TR></TBODY></TABLE>
+<!--VÉGE-->
+<img src="lenn1.gif"  valign="bottom" width="100%">
+</td>
+</tr>
+
+</table>
+
+</div>    
+<br>
+
+ <table border="0" id="ujak_table_1" cellpadding="0" cellspacing="0" width="90%"
+        bgcolor="#FFFDD2" bordercolor="#FFB936"
+        bordercolordark="#FFB936" bordercolorlight="#FFB936" >
+        <tr>
+        <td bgcolor="#FFFDD2">
+<font color="#000000"
+        size="1" face="verdana"><strong>&nbsp;Design, OPENGL tutorials I   2002.         Augusztus  20. 15:23.07</strong></font>
+</td>
+        </tr>
+        <tr>
+        <td bgcolor="#FFF1C7">
+<img src="fenn1.gif" align="top" width="100%">
+         <font color="#000000" size="1" face="verdana"><strong>&nbsp;OpenGl dokumentumok, feladatok Visual Basic 6.0-hoz!!!</strong>
+&nbsp;Tehát OPENGL &nbsp;központúak lettünk.
+<b>»<a title="Opengl doksik gyûjteménye/kezdetleges" href="htms\opengl.htm" target="opengl" class=hun name="open_gl" onmouseover=ColorFade(name,"#000000","#FE771B") onmouseout=Clear()>Opengl Doksik</a></b></font></td></tr>
+<tr>
+<td bgcolor="#FFF1C7">
+<img src="lenn1.gif" valign="bottom"  width="100%">
+</td>
+</tr>
+</table>
+ 
+</div>    
+<br>
+
+        <div align="center"><center><table border="1"
+        cellpadding="0" cellspacing="0" width="90%"
+        bgcolor="#FFFDD2" bordercolor="#FFFFFF"
+        bordercolordark="#FFFFFF" bordercolorlight="#FFFFFF">
+ 
+<table border="1" id="letolt_table" cellpadding="0" cellspacing="0" width="90%"
+        bgcolor="#FFF1C7" bordercolor="#ffffff"
+        bordercolordark="#FFFDD2" bordercolorlight="#FFFDD2">
+            </tr>
+            <tr bgcolor="#FFFDD2">
+                <td colspan="3" width="1%">
+<font face=verdana size=1><b>&nbsp;Közvetlen letöltések</b></font>
+</td>
+            </tr>
+          
+ <tr>
+                <td align="left" colspan="3" bgcolor="#FFF1C7">
+<img src="fenn1.gif" align="top" width="100%"><font color="#000000" size="1"
+                face="Verdana">&nbsp;Néhány finomság('03.03.12)</font>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFF1C7"><font size="1"
+                face="Verdana"><strong>&nbsp;::Térképek::</strong> 
+Budapest térkép valamint Magyarország autótérképe.</font></td>
+                <td align="center" bgcolor="#FFF1C7"><b>»<a title="Budapest térkép"
+                href="map1.ace" class=hun name="bp" onmouseover=ColorFade(name,"#000000","#FE771B")  onmouseout=Clear()><font
+                size="1" face="Verdana">Bp.térkép</font></a></b>
+<b>»<a title="Magyarország autóstérkép"
+                href="map2.ace" class=hun name="mo" onmouseover=ColorFade(name,"#000000","#FE771B")  onmouseout=Clear()><font
+                size="1" face="Verdana">Mo.térkép</font></a></b></td>
+            </tr>
+
+<!--Uj-->
+            <tr>
+                <td bgcolor="#FFF1C7"><font size="1"
+                face="Verdana"><strong>&nbsp;::TV SCREEN::</strong> 
+TV Képernyõ, szignál, ha az exe-t átnevezed SCR-re &nbsp;kész a saját ScreenSaver-ed.-)</font></td>
+
+                <td align="center" bgcolor="#FFF1C7"><b>»<a title="Tv Screen"
+                href="tvscreen.exe" class=hun name="tvscr" onmouseover=ColorFade(name,"#000000","#FE771B")  onmouseout=Clear()><font
+                size="1" face="Verdana">Tv Screen</font></a></b>
+</td>
+            </tr>
+ 
+            <tr>
+                <td colspan="3" width="1%"><font color="#000000"
+                size="1" face="Verdana">&nbsp;Hát egyelõre ennyit
+                raktam fel, ha kéne valami program vagy csak
+                VB-s vagy és &nbsp;érdeklõdnél valami iránt, kérlek
+                írj!</font>
+<img src="lenn1.gif" valign="bottom"  width="100%">
+</td>
+            </tr>
+        </table>
+ 
+
+</center></div>
+ 
+<align="center"><font size="1"
+        face="Verdana">-.-</font>
+ 
+        <div align="center"><center><table border="0"
+        cellpadding="0" cellspacing="0" width="90%"
+        bgcolor="#FFB936" bordercolor="#FFFFFF"
+        bordercolordark="#FFFFFF" bordercolorlight="#FFFFFF">
+            <tr>
+                <td width="100%"><font color="#000000" size="2"
+                face="Verdana">&nbsp;2001. Szeptember 05. &gt;&gt; a
+                lap kezdete</font></td>
+            </tr>
+        </table>
+        </center></div>
+
+<br>
+<font face="verdana" size="1"><b>:Képek::</b>
+<br>
+<img src="fenn1.gif" width="80%">
+<br>
+
+<br>
+<IMG SRC="lion.gif" onmouseover="popup('A Macsek!','')"  onmouseout=kill()>
+<IMG SRC="bmw.gif" onmouseover="popup('A tökéletes járgány...','')" onmouseout=kill()>
+
+<br> 
+<img src="http://free.enveco.hu/util/counter.gif?id=1105">
+
+<br> 
+<img src="lenn1.gif" width="80%">
+<br> 
+
+<p align="center">
+<font color="#000000" size="1"
+face="verdana">I <strong>Optimalizálva:</strong> 800X600 felbontás, <strong>Internet
+Explorer 5.5, Windows Xp</strong> I
+<br>
+<font color="#000000" size="1"
+face="verdana">I <strong>Tesztelve:</strong> 1024X768 felbontás, <strong>Internet
+Explorer 6,  Windows 98 is</strong> I<br>
+I Created with <strong>Notepad</strong> I All rights reserved. I</p></font>
+
+<STRONG>
+<Script language="VBscript">
+  Dim s
+
+  s = ""
+  s = ScriptEngine & " Version "
+  s = s & ScriptEngineMajorVersion & "."
+  s = s & ScriptEngineMinorVersion & "."
+  s = s & ScriptEngineBuildVersion 
+  document.write cstr(s)
+</Script>
+</STRONG>
+
+<br>Az összes kód (SCRIPT) Visual Basic Script-ben írva (VBS),  mind saját fejlesztés.
+<br>Az oldalról való lopás engedélyezett, bizonyos kereteken belül!:)
+<br>Webmaster feltüntetésével, beleegyezésével stb-stb-stb...
+
+</td>
+        <td align="right" valign="top" rowspan="2"><div align="left"><table border="0"
+        cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td align="right" valign="top" width="100%"><font size="1" face="Verdana">
+ 
+<MAP NAME="FrontPageMap0"><AREA SHAPE="RECT" COORDS="0, 2, 70, 19" HREF="http://www.freemail.hu" onmouseover="popup('Az egyik legjobb mail rendszer.','')" onmouseout=kill()  TARGET="fre">
+<AREA SHAPE="RECT" COORDS="0, 21, 71, 37" HREF="http://www.intermail.hu" onmouseover="popup('Én csakis ezt használom!','')" onmouseout=kill() TARGET="int" class=hands>
+<AREA SHAPE="RECT" COORDS="0, 39, 71, 55" HREF="http://www.origo.hu" onmouseover="popup('Központ, hírek, stb...','')" onmouseout=kill() TARGET="ori">
+<AREA SHAPE="RECT" COORDS="0, 56, 72, 75" HREF="http://www.goliat.hu" onmouseover="popup('Egyik legnagyobb keresõnk.','')" onmouseout=kill() TARGET="gol">
+<AREA SHAPE="RECT" COORDS="0, 76, 75, 94" HREF="http://www.chat.hu" onmouseover="popup('És persze nem maradhat el a chat.hu sem...','')" onmouseout=kill() TARGET="chat"></MAP><img src="mailek.gif" width="71" height="94"  class=hands  border="0" usemap="#FrontPageMap0">
+ 
+</font></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+   <td align="right"><img src="szorak3.gif" width="95" height="22" onmouseover="popup('Szórakozás','')" onmouseout=kill()></td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="100%"
+                bgcolor="#000000">&nbsp;&nbsp;<a href="http://www.lba.hu" name="lba2" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear() title="LBA ökörségek honlapja:)))"><font
+                size="2" face="Arial">Lba.hu</font></a></td>
+            </tr>
+            <tr>
+                <td  align="left" valign="top" width="100%"
+                bgcolor="#000000">&nbsp;&nbsp;<a
+                href="http://www.egysoros.hu" name="1soros" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear() title="Egysorosak, a legjobbak!:)"><font size="2"
+                face="Arial">Egysoros </font></a></td>
+            </tr>
+            <tr>
+            <td  align="left" valign="top" width="100%" bgcolor="#000000">&nbsp;&nbsp;<a
+                href="http://chat.gyaloglo.hu" name="gyali" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear() title="Chat.gyaloglo.hu"><font size="2" face="Arial">Gyaloglo Chat</font></a></td>
+            </tr>
+
+            <td  align="left" valign="top" width="100%" bgcolor="#000000">&nbsp;&nbsp;<a
+                href="htms\id.htm" name="id_str" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear() title="John Carmack és az id STORY"><font size="2" face="Arial">Az id Story</font></a></td>
+            </tr>
+
+            <td  align="left" valign="top" width="100%" bgcolor="#000000">&nbsp;&nbsp;<a
+                href="htms\signs.htm" name="sign_s" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear() title="Jelek..."><font size="2" face="Arial">Jelek...</font></a></td>
+            </tr>
+
+            <td  align="left" valign="top" width="100%" bgcolor="#000000">&nbsp;&nbsp;<a
+                href="htms\neo.htm" name="zion" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear() title="Linkajánló: www.morpheus.hu"><font size="2" face="Arial">Morpheus.hu</font></a></td>
+            </tr>
+
+            <td  align="left" valign="top" width="100%" bgcolor="#000000">&nbsp;&nbsp;<a
+                href="htms\dog.htm" name="doggy" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear() title="A kutya évében születtem..."><font size="2" face="Arial">A kutya éve...</font></a></td>
+            </tr>
+
+            <td  align="left" valign="top" width="100%" bgcolor="#000000">&nbsp;&nbsp;<a
+                href="htms\drive.htm" name="your_drive" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear() title="C:\ meghajtód tartalma"><font size="2" face="Arial">C:\ meghajtód</font></a></td>
+            </tr>
+
+            <tr>
+                 <td>&nbsp;</td>
+            </tr>
+<tr>
+<td>
+
+<!--Enveco Free Szavazás kezdete kicsit átírva-))-->
+<style>.vinp { BACKGROUND-COLOR: #000000 ;COLOR: #FFB936 ;FONT-FAMILY: Verdana, Arial;} .vlink {font-family: Verdana, Arial;font-size: 11px; color: #ffffff;} </style> <form method="post" action = "http://free.enveco.hu/votestat.jsp?id=2952"><table bgcolor="#FFCB36" cellspacing="0" cellpadding="0"><tr><td><font face = "Arial" size="1" color="#000000"><center><b>Szavazz már!!!</td></tr><tr><td><table border="0" bgcolor="#000000" width="100"><tr><td colspan = "2" width="100"><p align="center"><b><font color="#ffffff" face="Arial" size="1">Kék vagy piros????</font></b> </p></td><INPUT Type="hidden" name="newvote" value="true"><tr><td valign="top"><INPUT TYPE="RADIO" checked NAME="vote" VALUE="1"></font></td><td bgcolor="#000000" width="100"><font color="#FFB936" face="Arial" size="1">Még szép, hogy kék, mint a BMW-m!<tr><td valign="top"><INPUT TYPE="RADIO" NAME="vote" VALUE="2"></font></td><td bgcolor="#000000" width="100"><font color="#FFB936" face="Arial" size="1">Hmm, talán piros, imádom a Ferrarit.</font></td></tr><TR><TD ALIGN=CENTER colspan="2" width="100"><input class=black_btn2 title="Szavazok most rögtön!!" type=SUBMIT NAME=SUBMIT value="ok" width="20"></TD></TR> <TR><TD ALIGN=CENTER colspan="2" width="100"></TD></TR><TR><TD ALIGN=CENTER colspan="2" width="100"><a class="vlink" href="http://free.enveco.hu/votestat.jsp?id=2952"  name="vote?" onmouseover=ColorFade(name,"#FE771B","#FFFFFF")  onmouseout=Clear()>szavazás állása</a></TD></TR> 
+</table><center>
+</table>
+<!--END-->
+<br>
+<div align="center"><A href="http://www.mu.uk"><img src="mu.gif" width=90% border="0" title="Éljen a Manchaster United !!!!" target="_blank"></A>
+
+</td></tr>
+</table> </FORM><!--Enveco Free Szavazás vége-->
+</td>
+</tr>
+
+</table>
+
+<div align="right"><a  href="mailto:lacasrac@wap.hu">
+       <img  src="public.gif" alt="mailto:lacasrac@wap.hu" border="0" width="175"
+        height="17"></a>
+
+<!--DISNEY ANIMATION
+<img src="dis.gif" name="disney" STYLE="VISIBILITY:hidden;LEFT:-100px;TOP: 25px;position=absolute" class="hands" title="Helloka...">--><!--onclick=ColorFade(name,"#FE771B","#FFFFFF")-->
+
+<!-- SCRIPTEK RÉSZLEG-----------------------------------------------------------> 
+<SCRIPT language="VBSCRIPT">
+'+-Saját képcsere script ------------------------------------------------- 
+
+Function MouseMove(pic1,hely) 
+  document.images(hely).src=""+pic1
+End function
+
+Function MouseOut(pic2,hely) 
+  document.images(hely).src=""+pic2
+End function 
+</SCRIPT>
+
+</body>
+</html>
